@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='C:/SI/EasyEclipse16/workspace/distribuicao/APPS/prospeccao'
+let g:netrw_dirhist_2='C:/si/EasyEclipse16/workspace/distribuicao'
+let g:netrw_dirhist_3='C:/si/EasyEclipse16/workspace/distribuicao/APPS'
+let g:netrw_dirhist_4='C:/si/EasyEclipse16/workspace/distribuicao/APPS/prospeccao'
+let g:netrw_dirhist_5='C:/si/EasyEclipse16/workspace/distribuicao/APPS/prospeccao/midia'
+let g:netrw_dirhist_6='C:/si/EasyEclipse16/workspace/distribuicao/APPS/prospeccao'
+let g:netrw_dirhist_7='C:/si/EasyEclipse16/workspace/distribuicao/APPS/prospeccao/midia'
+let g:netrw_dirhist_8='C:/si/EasyEclipse16/workspace/distribuicao/APPS/prospeccao'
+let g:netrw_dirhist_9='C:/si/EasyEclipse16/workspace/distribuicao/APPS/prospeccao/midia'
