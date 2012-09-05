@@ -85,6 +85,8 @@ imap "" ""<c-o>h
 imap ""; ;<c-o>h""
 imap ''; ;<c-o>h''
 
+imap >> &gt;
+
 " clearing highlighted search
 nmap <silent> <leader>/ :nohlsearch<CR>
 nmap <silent> ,n :NERDTreeToggle<cr>
