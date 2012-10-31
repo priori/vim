@@ -1,4 +1,3 @@
-au GUIEnter * simalt ~x 
 
 "set nocompatible " esquece compatibilidade com vi antigo
 filetype on
@@ -31,26 +30,28 @@ set wildignore=*~
 
 " let NERDTreeShowHidden
 
-set guifont=Lucida\ Console
-colorscheme navajo-night     
+" set guifont=Lucida\ Console
+set guifont=Monospace\ 9
+colorscheme navajo-night
 set list
-set listchars=tab:-\ ,eol:¬
-"set listchars=trail:·,precedes:«,extends:»,eol:?,tab:?\   
+set listchars=tab:-\ ,eol:Â¬
+"set listchars=trail:Â·,precedes:Â«,extends:Â»,eol:?,tab:?\
 highlight NonText guifg=#5d758c
 highlight SpecialKey guifg=#5d758c
-" infelizmente fui obrigado a colocar estas linhas no navajo-night também
+" infelizmente fui obrigado a colocar estas linhas no navajo-night tambÃ©m
 
 function! <SID>StripTrailingWhitespaces()
-	" Preparation: save last search, and cursor position.
-	let _s=@/
-	let l = line(".")
-	let c = col(".")
-	" Do the business:
-	%s/\s\+$//e
-	%s/$//e
-	" Clean up: restore previous search history, and cursor position
-	let @/=_s
-	call cursor(l, c)
+" Preparation: save last search, and cursor position.
+let _s=@/
+let l = line(".")
+let c = col(".")
+" Do the business:
+%s/\s\+$//e
+%s/
+$//e
+" Clean up: restore previous search history, and cursor position
+let @/=_s
+call cursor(l, c)
 endfunction
 
 nnoremap <silent> <F1> :call <SID>StripTrailingWhitespaces()<CR>
@@ -62,7 +63,7 @@ nmap <silent> <C-l> <C-w>l
 nmap <silent> <C-k> <C-w>k
 nmap <silent> <C-j> <C-w>j
 nmap <silent> <C-h> <C-w>h
-nmap ç ^
+nmap Ã§ ^
 
 " moving
 imap <c-h> <c-o>h
@@ -108,9 +109,9 @@ nmap <leader>f7 :set foldlevel=7<CR>
 nmap <leader>f8 :set foldlevel=8<CR>
 nmap <leader>f9 :set foldlevel=9<CR>
 
-set guioptions-=m  " remove menu bar
-set guioptions-=T  " remove toolbar
-set guioptions-=r  " remove right-hand scroll bar
+set guioptions-=m " remove menu bar
+set guioptions-=T " remove toolbar
+set guioptions-=r " remove right-hand scroll bar
 
 function! MakeViewCheck()
     if has('quickfix') && &buftype =~ 'nofile'
@@ -138,5 +139,3 @@ augroup vimrcAutoView
     autocmd BufWinEnter ?* if MakeViewCheck() | silent loadview | endif
 augroup end
 
-
-let s:sparkup = "C:\Python27\python "
